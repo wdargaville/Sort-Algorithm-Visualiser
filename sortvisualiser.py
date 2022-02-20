@@ -36,36 +36,6 @@ def show(height):
     # infinite loop
 
 
-
-#TKINTER CODE
-###########
-def onsubmit():
-    global start
-    global end
-    st = startBox.get().split(',')
-    ed = endBox.get().split(',')
-    start = grid[int(st[0])][int(st[1])]
-    end = grid[int(ed[0])][int(ed[1])]
-    window.destroy()
-
-window = Tk()
-label = Label(window, text='Start(x,y): ')
-startBox = Entry(window)
-label1 = Label(window, text='End(x,y): ')
-endBox = Entry(window)
-var = IntVar()
-showPath = ttk.Checkbutton(window, text='Show Steps :', onvalue=1, offvalue=0, variable=var)
-
-submit = Button(window, text='Submit', command=onsubmit)
-
-showPath.grid(columnspan=2, row=2)
-submit.grid(columnspan=2, row=3)
-label1.grid(row=1, pady=3)
-endBox.grid(row=1, column=1, pady=3)
-startBox.grid(row=0, column=1, pady=3)
-label.grid(row=0, pady=3)
-############
-
 while run:
     # execute flag to start sorting
     execute = False
